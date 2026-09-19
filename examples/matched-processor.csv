@@ -1,0 +1,5 @@
+transaction_id,currency,amount,description
+yen-01,JPY,1800.000,Equivalent amount
+dinar-01,KWD,4.125,Equivalent amount
+refund-01,USD,-12.500,Equivalent amount
+purchase-01,CAD,0.300,Equivalent amount

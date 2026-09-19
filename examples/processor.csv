@@ -1,0 +1,8 @@
+transaction_id,currency,amount,description
+txn-008,JPY,1500,Japanese yen purchase
+txn-001,CAD,129.990,Books payment
+txn-002,CAD,47.50,Unexpected adjustment
+txn-003,CAD,-20.0,Partial refund
+txn-004,CAD,75.00,Incorrect currency
+txn-006,CAD,32.00,Single settlement
+txn-007,CAD,9.99,Unposted payment

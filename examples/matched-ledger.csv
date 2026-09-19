@@ -1,0 +1,5 @@
+transaction_id,currency,amount,description
+purchase-01,CAD,0.30,Exact decimal example
+refund-01,USD,-12.50,Refund
+yen-01,JPY,1800,No fractional minor unit
+dinar-01,KWD,4.125,Three fractional minor units

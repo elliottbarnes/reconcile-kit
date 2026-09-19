@@ -1,0 +1,9 @@
+transaction_id,currency,amount,description
+txn-001,CAD,129.99,"Blue Harbor Books, order 1042"
+txn-002,CAD,48.50,Westbrook subscription
+txn-003,CAD,-20.00,Partial refund
+txn-004,USD,75.00,Seaside workshop
+txn-005,CAD,14.25,Pending settlement
+txn-006,CAD,32.00,Duplicated export row
+txn-006,CAD,32.00,Duplicated export row
+txn-008,JPY,1500,"Quoted ""special"" item"
