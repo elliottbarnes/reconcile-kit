@@ -6,6 +6,24 @@ A Java 21 command-line tool that reconciles ledger and payment-processor CSV exp
 
 This is a standalone educational portfolio project using synthetic fixtures. It is not an accounting system, a production ledger, financial advice, or a representation of an employer's systems.
 
+## Interactive browser example
+
+[Open Reconcile Kit on GitHub Pages](https://elliottbarnes.github.io/reconcile-kit/).
+
+Edit both CSV exports, inspect all classifications and source lines, compare currency totals, and download a deterministic JSON report. Examples include the five documented exceptions, reordered matching exports, and 30-digit amounts that retain a one-cent difference.
+
+The browser implements the matching rules in JavaScript with **BigInt minor units**; it does not run the Java CLI. The supported subset is explicit: CAD, USD, EUR, GBP, JPY and KWD, up to 200 transactions and 100,000 characters per input. Strict four-column CSV quoting, multiline descriptions, duplicate precedence and the native decimal syntax are preserved. The native CLI retains its larger bounds and JDK currency table.
+
+```sh
+./gradlew build installDist
+node --test tests-browser/*.test.mjs  # Node.js 24+; compares full reports with Java
+node scripts/verify-demo.mjs
+python3 -m http.server 8081 --bind 127.0.0.1 --directory demo
+```
+
+Open `http://localhost:8081`. CI runs JUnit, packaging, installed-CLI smoke checks, browser/Java parity and artifact validation before deploying only `demo/`. See [demo verification](docs/DEMO.md).
+
+
 ## Try it
 
 Install a [Java 21 JDK](https://adoptium.net/temurin/releases/?version=21). Gradle itself does not need to be installed: the checked-in wrapper downloads and verifies the pinned distribution on first use.
