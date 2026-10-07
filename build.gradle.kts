@@ -17,6 +17,9 @@ dependencies {
     testRuntimeOnly("org.junit.platform:junit-platform-launcher")
 }
 
+// Keep coverage dependencies aligned with the reviewed locks and checksums.
+jacoco { toolVersion = "0.8.14" }
+
 tasks.withType<JavaCompile>().configureEach {
     options.encoding = "UTF-8"
     options.compilerArgs.addAll(listOf("-Xlint:all", "-Werror"))

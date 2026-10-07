@@ -157,8 +157,9 @@ Tests cover quoted multiline CSV, malformed rows, invalid UTF-8, currency precis
 
 Build choices are pinned and inspectable:
 
-- Java 21 toolchain; Gradle 9.7.1 wrapper with the official SHA-256 distribution checksum.
+- Java 21 toolchain; Gradle 9.8.0 wrapper with the official SHA-256 distribution checksum.
 - JUnit 6.1.3 for tests; no runtime libraries.
+- JaCoCo 0.8.14 explicitly pinned to keep coverage dependencies aligned with the reviewed locks and checksums across Gradle upgrades.
 - Dependency locking and SHA-256 verification metadata for downloaded build dependencies.
 - GitHub Actions pinned to immutable commits, read-only repository permissions and automatic wrapper validation. CI runs the build and installed-CLI smoke test on Ubuntu.
 - Dependabot checks Gradle and action dependencies monthly. Review changed versions and checksums before merging updates.
